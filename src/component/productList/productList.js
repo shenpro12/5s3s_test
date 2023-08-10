@@ -41,7 +41,7 @@ function ProductList() {
           </h1>
           <section className="mb-3 pr-2 flex flex-1 flex-wrap text-white bg-white [&>button]:mx-0.5 [&>button]:px-4 [&>button]:py-2 [&>button]:text-sm [&>button]:font-medium">
             <Link
-              to="/category"
+              to="/select/category"
               className="bg-bars mx-0.5 px-4 py-2 text-sm font-medium hover:bg-sky-500 mt-1"
             >
               <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>

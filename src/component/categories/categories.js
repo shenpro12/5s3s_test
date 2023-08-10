@@ -31,7 +31,7 @@ function Categories() {
         <section className="px-3 pb-5 grid gap-4 grid-cols-2 xl:grid-cols-3">
           {categories.map((category) => (
             <Link
-              to={`/${category.strCategory}/product`}
+              to={`/select/${category.strCategory}/product`}
               key={category.idCategory}
               className="bg-white h-48 w-full p-3 rounded block relative overflow-hidden hover:[&>img]:scale-125"
             >
