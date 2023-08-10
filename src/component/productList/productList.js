@@ -24,7 +24,9 @@ function ProductList() {
   useEffect(() => {
     (async () => {
       const res = await request.get(`filter.php?c=${category}`);
-      setProducts(res.meals.map((meal) => ({ ...meal, price: 7 })));
+      if (res.meals && res.meals.length) {
+        setProducts(res.meals.map((meal) => ({ ...meal, price: 7 })));
+      }
       setLoading(false);
     })();
   }, []);
@@ -62,6 +64,11 @@ function ProductList() {
           </section>
         </section>
         {loading && <Loading></Loading>}
+        {!products.length && !loading && (
+          <h1 className="text-center font-bold text-black/50">
+            Not found Product!
+          </h1>
+        )}
         <section className="px-3 pb-5 grid gap-4 grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <div

@@ -32,3 +32,9 @@ export function changeQuantityWithNumber(payload) {
     payload: payload,
   };
 }
+
+export function clearCart() {
+  return {
+    type: "CLEARCART",
+  };
+}

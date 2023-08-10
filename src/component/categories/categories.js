@@ -25,6 +25,9 @@ function Categories() {
           </h1>
         </section>
         {loading && <Loading></Loading>}
+        {!categories.length && !loading && (
+          <h1 className="text-center font-bold text-black/50">Not found!</h1>
+        )}
         <section className="px-3 pb-5 grid gap-4 grid-cols-2 xl:grid-cols-3">
           {categories.map((category) => (
             <Link

@@ -13,7 +13,7 @@ function Header() {
         <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
       </button>
       <section className="flex-1 flex items-center justify-between px-4 text-white text-sm">
-        <section className="flex items-center">
+        <section className="hidden md:flex items-center ">
           <FontAwesomeIcon icon={faShop}></FontAwesomeIcon>
           <h2 className="px-5 font-semibold">
             Store: <span className="font-normal">Food Store</span>
@@ -22,7 +22,7 @@ function Header() {
             Register: <span className="font-normal">Register 1</span>
           </h2>
         </section>
-        <section className="flex items-center text-white [&>button]:px-3 [&>button]:duration-150">
+        <section className="hidden md:flex items-center text-white [&>button]:px-3 [&>button]:duration-150">
           <button className="text-xl hover:text-sky-500">
             <FontAwesomeIcon
               icon={faBell}

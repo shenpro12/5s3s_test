@@ -47,6 +47,11 @@ function reducer(state, action) {
           return product;
         }),
       };
+    case "CLEARCART":
+      return {
+        ...state,
+        productList: [],
+      };
     default:
       return state;
   }
